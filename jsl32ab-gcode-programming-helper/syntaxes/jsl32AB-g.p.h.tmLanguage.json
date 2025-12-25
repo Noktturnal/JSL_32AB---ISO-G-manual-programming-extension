@@ -1,32 +1,39 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "JSL32AB-G.P.H.",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.jsl32AB-g.p.h",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.jsl32AB-g.p.h",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.jsl32AB-g.p.h",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.jsl32ab"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "JSL32AB-G.P.H.",
+  "scopeName": "source.jsl32ab",
+  "patterns": [
+    { "include": "#keywords" },
+    { "include": "#strings" },
+    { "include": "#gcodes" }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.jsl32AB-g.p.h",
+          "match": "\\b(if|while|for|return)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.jsl32AB-g.p.h",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.jsl32AB-g.p.h",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "gcodes": {
+      "patterns": [
+        { "name": "keyword.gcode.g0", "match": "\\bG0\\b" },
+        { "name": "keyword.gcode.g1", "match": "\\bG1\\b" },
+        { "name": "keyword.gcode.g2", "match": "\\bG2\\b" },
+        { "name": "keyword.gcode.g3", "match": "\\bG3\\b" }
+      ]
+    }
+  }
 }
