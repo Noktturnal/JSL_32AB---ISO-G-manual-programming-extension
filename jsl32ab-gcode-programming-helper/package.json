@@ -1,0 +1,25 @@
+{
+  "name": "jsl32ab-gcode-programming-helper",
+  "displayName": "JSL32AB-GCODE_PROGRAMMING_HELPER",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.107.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "jsl32AB-g.p.h",
+      "aliases": ["JSL32AB-G.P.H.", "jsl32AB-g.p.h"],
+      "extensions": [".nc",".gcode",".cnc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "jsl32AB-g.p.h",
+      "scopeName": "source.jsl32ab",
+      "path": "./syntaxes/jsl32AB-g.p.h.tmLanguage.json"
+    }]
+  }
+}
